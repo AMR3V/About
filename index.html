@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ABOUT | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: rgb(6, 6, 133);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            font-size: 1.02rem;
+            color: blueviolet;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .sm {
+            background-color: rgb(219, 41, 101);
+        }
+
+        .sm ul {
+            display: flex;
+            margin: 0px 50px;
+            justify-content: baseline;
+        }
+
+        .sm ul li {
+            list-style: none;
+            margin: 10px 20px;
+            width: 150px;
+        }
+
+        .sm ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .sm ul li a:hover {
+            text-decoration: none;
+            color: aquamarine;
+            font-size: 1.02rem;
+        }
+
+        .footerright {
+            color: white;
+            text-align: center;
+        }
+
+        main {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            background-color: rgb(0, 0, 33);
+        }
+
+        .inner {
+            padding-top: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: #fff;
+            padding: 0.1rem;
+            position: relative;
+            font-size: 2rem;
+            margin: 50px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            grid-gap: 1rem;
+            padding: 1rem 80px;
+            font-size: 1.2rem;
+        }
+
+        .skill-box {
+            padding: 1rem;
+            color: #ddd;
+            cursor: pointer;
+        }
+
+        .skill-box:hover>.skill-title:after,
+        .skill-box:hover>.skill-title:before {
+            width: 35px;
+        }
+
+        .skill-box:hover .img {
+            transition: translateY(-10%);
+
+        }
+
+        .skill-title {
+            padding: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .skill-icon1 {
+            width: 80px;
+            z-index: 2;
+        }
+
+        .skill-icon2 {
+            width: 70px;
+            z-index: 2;
+        }
+
+        .skill-icon3 {
+            width: 90px;
+            z-index: 2;
+        }
+
+        .skill-icon4 {
+            width: 70px;
+            z-index: 2;
+        }
+
+        .skill-icon5 {
+            width: 140px;
+            z-index: 2;
+        }
+
+        .skill-icon6 {
+            width: 70px;
+            z-index: 2;
+        }
+
+        .skill-title:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 0;
+            height: 4px;
+            border-radius: 2px 0 0 2px;
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
+
+        .skill-title:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 4px;
+            border-radius: 2px 0 0 2px;
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
+
+        .skill-title h3 {
+            color: #fff;
+        }
+
+        .img {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            border-radius: 60px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            margin-left: 130px;
+        }
+
+        .img:after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 50%;
+            height: 100px;
+            background: rgba(100, 100, 100, 0.3);
+            border-radius: 45px 0 0 45px;
+
+        }
+
+        .header1 {
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .welcome {
+            text-align: center;
+            font-size: 2rem;
+            margin: 50px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-left: 80px;
+            width: 1200px;
+            font-size: 20px;
+        }
+
+        .header2 {
+            font-size: 2rem;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .container2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            grid-gap: 1rem;
+            padding: 1rem 80px;
+            font-size: 1.2rem;
+        }
+
+        .skill-box2 {
+            padding: 1rem;
+            color: #ddd;
+            cursor: pointer;
+        }
+
+        .skill-title2 {
+            padding: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .skill-title2 h3 {
+            color: #fff;
+        }
+
+        .skill-title2:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 0;
+            height: 4px;
+            border-radius: 2px 0 0 2px;
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
+
+        .skill-title2:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 4px;
+            border-radius: 2px 0 0 2px;
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
+
+        .skill-box2:hover>.skill-title2:after,
+        .skill-box2:hover>.skill-title2:before {
+            width: 35px;
+        }
+
+        .skill-box2:hover .img2 {
+            transition: translateY(-10%);
+
+        }
+
+        .img2 {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            border-radius: 60px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            margin-left: 225px;
+        }
+
+        .img2:after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 50%;
+            height: 120px;
+            background: rgba(100, 100, 100, 0.3);
+            border-radius: 45px 0 0 45px;
+
+        }
+
+        .talent-icon1 {
+            width: 140px;
+            z-index: 2;
+        }
+
+        .talent-icon2 {
+            width: 100px;
+            z-index: 2;
+        }
+
+        .talent-icon3 {
+            width: 100px;
+            z-index: 2;
+        }
+
+        .talent-icon4 {
+            width: 100px;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <h4>RITWIK VERMA</h4>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/index.html"><b>HOME</b></a></li>
+                    <li><a href="/About.html"><b>ABOUT</b></a></li>
+                    <li><a href="/Projects.html"><b>PROJECTS</b></a></li>
+                    <li><a href="/Contactme.html"><b>CONTACT ME</b></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="inner">
+
+            <div class="header1"><u>WELCOME TO MY PORTFOLIO!</u></div>
+            <p class="welcome"><u>ABOUT ME</u></p>
+            <p class="intro">
+                I am an enthusiastic Java developer with a strong interest in object-oriented programming languages.
+                My experience in the realm of coding has provided me with a varied skill set that includes knowledge of
+                Java, C, and C++.
+                I'm also interested in database administration with SQL, as well as web development tools like HTML and
+                CSS.
+                In my drive for constant growth, I am now broadening my horizons by dabbling in JavaScript and Python.
+                Beyond the lines of code, I have a strong interest in cryptography.
+                The delicate realm of information security and data privacy has long piqued my interest.
+                This portfolio documents my path by exhibiting the projects and talents that characterise my identity as
+                a Java developer
+                with a thirst for knowledge and a varied variety of interests in cryptography and web development.
+            </p>
+
+            <div class="header"><u>MY SKILLS</u></div>
+            <div class="container">
+
+                <div class="skill-box">
+                    <div class="img">
+                        <img src="Java.png" class="skill-icon1">
+                    </div>
+                    <h3>JAVA</h3>
+                    <div class="skill-title"></div>
+                    <p>I am a Java developer skilled in creating robust and scalable applications using Java.</p>
+                </div>
+
+                <div class="skill-box">
+                    <div class="img">
+                        <img src="C.png" class="skill-icon2">
+                    </div>
+                    <h3>C/C++</h3>
+                    <div class="skill-title">
+                    </div>
+                    <p>I am C/C++ developer proficient in implementing efficient and reliable software solutions in C
+                        and C++.</p>
+                </div>
+
+                <div class="skill-box">
+                    <div class="img">
+                        <img src="HTML.png" class="skill-icon3">
+                    </div>
+                    <h3>HTML 5</h3>
+                    <div class="skill-title">
+                    </div>
+                    <p>A HTML developer adept at crafting responsive and well-structured web pages to enhance user
+                        experiences.</p>
+                </div>
+
+                <div class="skill-box">
+                    <div class="img">
+                        <img src="CSS.png" class="skill-icon4">
+                    </div>
+                    <h3>CSS 3</h3>
+                    <div class="skill-title">
+                    </div>
+                    <p>A CSS developer with expertise in creating visually appealing and stylish layouts to elevate the
+                        presentation and aesthetics of web applications.</p>
+                </div>
+
+                <div class="skill-box">
+                    <div class="img">
+                        <img src="SQL.png" class="skill-icon5">
+                    </div>
+                    <h3>SQL</h3>
+                    <div class="skill-title">
+                    </div>
+                    <p>A SQL developer experienced in designing and optimizing database structures, writing efficient
+                        queries, and ensuring data integrity for seamless data management.</p>
+                </div>
+
+                <div class="skill-box">
+                    <div class="img">
+                        <img src="Javascript.png" class="skill-icon6">
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-title">
+                    </div>
+                    <p>I an aspiring JavaScript developer, eager to leverage the power of the language for dynamic and
+                        interactive web development.</p>
+                </div>
+            </div>
+
+            <div class="header2"><u>NON ACADEMICS</u></div>
+
+            <div class="container2">
+
+                <div class="skill-box2">
+                    <div class="img2">
+                        <img src="Basketball.png" class="talent-icon1">
+                    </div>
+                    <h3>BasketBall</h3>
+                    <div class="skill-title2"></div>
+                    <p>I am a district level basketball player from my school days</p>
+                </div>
+
+
+                <div class="skill-box2">
+                    <div class="img2">
+                        <img src="Chess.png" class="talent-icon2">
+                    </div>
+                    <h3>Chess</h3>
+                    <div class="skill-title2"></div>
+                    <p>I am a state level chess player from my school days</p>
+                </div>
+
+
+                <div class="skill-box2">
+                    <div class="img2">
+                        <img src="Rotaract.png" class="talent-icon3">
+                    </div>
+                    <h3>Volunteering</h3>
+                    <div class="skill-title2"></div>
+                    <p>I am a Rotarian, I love and am passionate to help people around me in any way possible.</p>
+                    <p>Helping others gives me peace and clear conciousness</p>
+                </div>
+
+
+                <div class="skill-box2">
+                    <div class="img2">
+                        <img src="Event2.png" class="talent-icon4">
+                    </div>
+                    <h3>Management</h3>
+                    <div class="skill-title2"></div>
+                    <p>Enthusiastic event manager with a flair for orchestrating vibrant festivals and navigating the
+                        energy of crowded events.</p>
+                    <p>I thrive on creating memorable experiences in dynamic, bustling settings.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer class="sm">
+        <ul>
+            <li><a href="mailto: ritwik.verma2612@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/ritwikverma1201" target="_blank">LinkedIn</a></li>
+            <li><a href="https://instagram.com/_.amrev._" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/kiwtir.amrev" target="_blank">Faceook</a></li>
+            <li><a href="https://x.com/4MR3V" target="_blank">X</a></li>
+            <li><a href="https://www.snapchat.com/add/k.amr3v" target="_blank">Snapchat</a></li>
+            <li><a href="https://github.com/AMR3V" target="_blank">GitHub</a></li>
+        </ul>
+    </footer>
+    <div class="footerright">
+        Ritwik's Developer Portal | All rights reserved
+    </div>
+</body>
+
+</html>
